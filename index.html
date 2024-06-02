@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Basics - MySQL Commands</title>
+    <link rel="stylesheet" href="database.css">
+    <script src="database.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Database Basics - MySQL Commands</h1>
+            <nav>
+                <ul>
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#create">CREATE</a></li>
+                    <li><a href="#select">SELECT</a></li>
+                    <li><a href="#insert">INSERT</a></li>
+                    <li><a href="#update">UPDATE</a></li>
+                    <li><a href="#delete">DELETE</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                    <li><a href="#constraints">Constraints</a></li>
+                    <li><a href="#joins">Joins</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section id="introduction" class="content">
+            <h2>Introduction to Databases</h2>
+            <p>A database is an organized collection of data, typically stored and accessed electronically from a computer system. Relational databases like MySQL use structured query language (SQL) to manage and manipulate the data.</p>
+        </section>
+        <section id="create" class="content">
+            <h2>CREATE Command</h2>
+            <p>The CREATE command is used to create a new database or table in MySQL.</p>
+            <p>Example:</p>
+            <pre><code>CREATE DATABASE mydatabase;</code></pre>
+            <p>CREATE TABLE syntax:</p>
+            <pre><code>CREATE TABLE customers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL
+);</code></pre>
+        </section>
+        <section id="select" class="content">
+            <h2>SELECT Command</h2>
+            <p>The SELECT command is used to retrieve data from one or more tables in MySQL.</p>
+            <p>Example:</p>
+            <pre><code>SELECT * FROM customers;</code></pre>
+        </section>
+        <section id="insert" class="content">
+            <h2>INSERT Command</h2>
+            <p>The INSERT command is used to insert new records into a table in MySQL.</p>
+            <p>Example:</p>
+            <pre><code>INSERT INTO customers (name, email) VALUES ('John Doe', 'john@example.com');</code></pre>
+        </section>
+        <section id="update" class="content">
+            <h2>UPDATE Command</h2>
+            <p>The UPDATE command is used to modify existing records in a table in MySQL.</p>
+            <p>Example:</p>
+            <pre><code>UPDATE customers SET email='john.doe@example.com' WHERE id=1;</code></pre>
+        </section>
+        <section id="delete" class="content">
+            <h2>DELETE Command</h2>
+            <p>The DELETE command is used to delete existing records from a table in MySQL.</p>
+            <p>Example:</p>
+            <pre><code>DELETE FROM customers WHERE id=1;</code></pre>
+        </section>
+        <section id="functions" class="content">
+            <h2>MySQL Functions</h2>
+            <p>Some commonly used MySQL functions:</p>
+            <ul>
+                <li>SELECT CONCAT(first_name, ' ', last_name) AS full_name FROM employees;</li>
+                <li>SELECT UPPER(email) AS uppercase_email FROM users;</li>
+                <li>SELECT LOWER(city) AS lowercase_city FROM addresses;</li>
+                <li>SELECT LENGTH(password) AS password_length FROM users;</li>
+                <li>SELECT AVG(salary) AS average_salary FROM employees;</li>
+                <li>SELECT COUNT(*) AS total_customers FROM customers;</li>
+                <li>SELECT MIN(age) AS min_age FROM users;</li>
+                <li>SELECT MAX(age) AS max_age FROM users;</li>
+            </ul>
+        </section>
+        <section id="constraints" class="content">
+            <h2>Constraints</h2>
+            <p>Constraints are used to specify rules for the data in a table. Some commonly used constraints:</p>
+            <ul>
+                <li>NOT NULL - Ensures that a column cannot have a NULL value.</li>
+                <li>UNIQUE - Ensures that all values in a column are unique.</li>
+                <li>PRIMARY KEY - Uniquely identifies each record in a table.</li>
+                <li>FOREIGN KEY - Constrains data based on columns in another table.</li>
+                <li>DEFAULT - Provides a default value for a column.</li>
+                <li>CHECK - Ensures that all values in a column satisfy a specific condition.</li>
+            </ul>
+        </section>
+        <section id="joins" class="content">
+            <h2>Joins</h2>
+            <p>Joins are used to combine rows from two or more tables based on a related column between them. Some commonly used joins:</p>
+            <ul>                <li>INNER JOIN - Returns records that have matching values in both tables.</li>
+                <li>LEFT JOIN - Returns all records from the left table and the matched records from the right table.</li>
+                <li>RIGHT JOIN - Returns all records from the right table and the matched records from the left table.</li>
+                <li>FULL JOIN - Returns all records when there is a match in either left or right table.</li>
+                <li>CROSS JOIN - Returns the Cartesian product of the sets of rows from the joined tables.</li>
+            </ul>
+        </section>
+        <section id="contact" class="content">
+            <h2>Contact Us</h2>
+            <p>For inquiries, please contact us at <a href="mailto:info@databasebasics.com">info@databasebasics.com</a>.</p>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Database Basics. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
